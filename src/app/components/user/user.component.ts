@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { DataService } from '../../services/data.service'
+import {Component, OnInit} from '@angular/core';
+import {DataService} from '../../services/data.service';
 
 
 @Component({
@@ -14,11 +14,11 @@ export class UserComponent implements OnInit {
   adress: Adress;
   hobbies: string[];
   hello: any;
-  posts:Post[];
-  isEdid:boolean = false;
+  posts: Post[];
+  isEdid = false;
 
   constructor(private dataService: DataService) {
-    console.log('constructor un..')
+    console.log('constructor un..');
   }
 
   ngOnInit() {
@@ -34,7 +34,7 @@ export class UserComponent implements OnInit {
     this.hobbies = ['Write code', 'Watch movies', 'Listen to music']
     this.hello = 1
     this.dataService.getPosts().subscribe((posts) => {
-      this.posts=posts;
+      this.posts = posts;
     });
   }
 
@@ -57,7 +57,7 @@ export class UserComponent implements OnInit {
     }
   }
 
-  edidUser(){
+  edidUser() {
     this.isEdid = !this.isEdid;
   }
 
@@ -69,9 +69,9 @@ interface Adress {
   state: string;
 }
 
-interface Post{
-  id:number,
-  title:string,
-  body:string,
-  userId:number
+interface Post {
+  id: number,
+  title: string,
+  body: string,
+  userId: number
 }
