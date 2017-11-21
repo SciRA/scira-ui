@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../services/user.service';
 
 declare var $: any;
 
@@ -9,7 +10,7 @@ declare var $: any;
 })
 export class SideBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
     // $(".button-collapse").sideNav();

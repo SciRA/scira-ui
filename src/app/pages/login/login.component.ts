@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
     this.userService.authenticate(this.model);
   }
   doLogout() {
-    this.userService.invalidate(this.model);
+    this.userService.invalidate();
   }
 
 }
