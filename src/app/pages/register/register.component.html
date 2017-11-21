@@ -1,0 +1,48 @@
+<div class="register-box valign-wrapper row">
+  <div class="col s10 pull-s1 m6 pull-m3 l4 pull-l4 z-depth-4 card-panel">
+    <form id="loginForm" class="login-form">
+
+      <div class="row">
+        <div class="input-field col s12 center">
+          <img width="64" height="64" src="assets/images/logo.png" alt="" class="circle responsive-img valign profile-image-login">
+          <p class="center login-form-text">Register into the SciRA</p>
+        </div>
+      </div>
+
+
+      <div class="row margin">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">mailk</i>
+          <label class="center-align" for="pass_sec">Your email</label>
+          <input id="pass_sec" name="pass_sec" type="email" [(ngModel)]="model.email">
+        </div>
+      </div>
+
+      <div class="row margin">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">perm_identity</i>
+          <label class="center-align" for="userTB">Please chose a username</label>
+          <input id="userTB" name="userTB" type="text" [(ngModel)]="model.username">
+        </div>
+      </div>
+
+
+      <div class="row margin">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">lock</i>
+          <label class="center-align" for="pass">Set your password</label>
+          <input id="pass_firs" name="pass" type="password" [(ngModel)]="model.password">
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="input-field  col s12">
+          <a id="submitBtn" class="btn waves-effect waves-light col s12 red darken-2" (click)="doRegister()">Register</a>
+        </div>
+      </div>
+
+
+    </form>
+  </div>
+</div>
