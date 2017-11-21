@@ -13,8 +13,7 @@
         <div class="input-field col s12">
           <i class="material-icons prefix">perm_identity</i>
           <label class="center-align" for="userTB">Username</label>
-          <input id="userTB" name="userTB" type="text" data-error=".errorTxt1">
-          <div class="errorTxt1 righted"></div>
+          <input id="userTB" name="userTB" type="text" [(ngModel)]="model.username">
         </div>
       </div>
 
@@ -22,8 +21,7 @@
         <div class="input-field col s12">
           <i class="material-icons prefix">lock</i>
           <label class="center-align" for="passTB">Password</label>
-          <input id="passTB" name="passTB" type="password" data-error=".errorTxt2">
-          <div class="errorTxt2 righted"></div>
+          <input id="passTB" name="passTB" type="password" [(ngModel)]="model.password">
         </div>
       </div>
 
@@ -33,7 +31,7 @@
         </div>
         <div class="input-field col s12">
           <p class="margin center medium-small sign-up">Don't have an account?
-            <a href="/signup">Register</a>
+            <a href="/register">Register</a>
           </p>
         </div>
       </div>
@@ -42,28 +40,3 @@
     </form>
   </div>
 </div>
-
-
-<!-- <div class="valign-wrapper row login-page">
-    <div class="col card hoverable s10 pull-s1 m6 pull-m3 l4 pull-l4">
-      <form>
-        <div class="card-content">
-          <span class="card-title">Enter credentials</span>
-          <div class="row">
-            <div class="input-field col s12">
-              <label for="email">Email address</label>
-              <input type="email" class="validate" name="email" id="email" />
-            </div>
-            <div class="input-field col s12">
-              <label for="password">Password </label>
-              <input type="password" class="validate" name="password" id="password" />
-            </div>
-          </div>
-        </div>
-        <div class="card-action right-align">
-          <input type="reset" id="reset" class="btn-flat grey-text waves-effect">
-          <input type="submit" class="btn green waves-effect waves-light" value="Login">
-        </div>
-      </form>
-    </div>
-  </div> -->

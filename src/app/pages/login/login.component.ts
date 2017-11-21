@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { UserService } from '../../services/user.service';
+import { User } from '../../models/user';
 declare var $: any;
 @Component({
   selector: 'app-login',
@@ -6,51 +8,23 @@ declare var $: any;
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
 
-  constructor() { }
+export class LoginComponent implements OnInit {
+  model: User;
+  constructor(private userService: UserService) {
+  }
 
   ngOnInit() {
-    this.enableValidation();
+    console.log('login-component init');
+    this.model = new User();
   }
 
   doLogin() {
-    console.log('login');
+    console.log('login', this.model);
+    this.userService.authenticate(this.model);
   }
-  enableValidation() {
-    console.log($('#loginForm'));
-    $('#loginForm').validate({
-      rules: {
-        userTB: {
-          required: true,
-          minlength: 5
-        },
-        passTB: {
-          required: true,
-          minlength: 5
-        }
-      },
-      messages: {
-        userTB: {
-          required: 'Enter a username',
-          minlength: 'Enter at least 5 characters'
-        },
-        passTB: {
-          required: 'Enter your password',
-          minlength: 'The password must have at least 5 characters'
-        }
-      },
-      errorElement: 'div',
-      errorPlacement: function (error, element) {
-        const placement = $(element).data('error');
-        if (placement) {
-          $(placement).append(error);
-        } else {
-          error.insertAfter(element);
-        }
-      }
-    });
-
+  doLogout() {
+    this.userService.invalidate(this.model);
   }
 
 }
