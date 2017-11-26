@@ -16,7 +16,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { MaterializeModule } from 'angular2-materialize';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import {HeaderComponent} from './components/header/header.component';
+import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
@@ -57,7 +57,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes, { enableTracing: true })
   ],
   providers: [DataService, UserService, AuthGuard, AuthService],
   bootstrap: [AppComponent]
