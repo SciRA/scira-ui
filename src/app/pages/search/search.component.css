@@ -1,0 +1,10 @@
+.filter-container {
+  background-color: gray;
+  min-height: 100vh;
+}
+
+.paper-container {
+  background-color: yellowgreen;
+  min-height: 100vh;
+}
+

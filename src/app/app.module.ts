@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './components/user/user.component';
 
 import { DataService } from './services/data.service';
-import { AboutComponent } from './pages/about/about.component';
 import { UserService } from './services/user.service';
 import { AboutComponent } from './components/about/about.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
@@ -23,6 +22,8 @@ import { RegisterComponent } from './pages/register/register.component';
 import { AuthGuard } from './guards/auth.guard';
 import { AuthService } from './services/auth.service';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { PaperComponent } from './components/paper/paper.component';
+import { SearchComponent } from './pages/search/search.component';
 
 const appRoutes: Routes = [
   {path: '', component: UserComponent},
@@ -32,8 +33,8 @@ const appRoutes: Routes = [
 
 const appRoutes: Routes = [
   { path: '', component: UserComponent, canActivate: [AuthGuard] },
-  { path: 'search', component: AboutComponent, canActivate: [AuthGuard] },
-  { path: 'contact', component: ContactComponent},
+  { path: 'search', component: SearchComponent, canActivate: [AuthGuard] },
+  { path: 'contact', component: ContactComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent }
 ]
@@ -42,7 +43,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     UserComponent,
-    AboutComponent,
+    SearchComponent,
     NavBarComponent,
     SideBarComponent,
     ContactComponent,
@@ -51,6 +52,7 @@ const appRoutes: Routes = [
     LoginComponent,
     RegisterComponent,
     PageNotFoundComponent,
+    PaperComponent,
   ],
 
   imports: [
