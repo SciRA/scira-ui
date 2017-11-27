@@ -7,12 +7,26 @@
 <div class="page-content">
   <div class=" row">
 
-    <div class="filter-container center-align col s3">
-      <!-- Grey navigation panel -->
-      filter
+    <div class="{{filter_container_size}}">
+      <div id="filter-container" class="filter-container">
+        <div>
+          filter1
+        </div>
+        <div>
+          filter2
+        </div>
+        <div>
+          ...
+        </div>
+      </div>
     </div>
 
-    <div class="paper-container col s9">
+    <div class="paper-container {{paper_container_size}}">
+
+      <a class=" filter-trigger-btn  btn-floating btn-small waves-effect waves-light red tooltipped" data-position="top" data-delay="50"
+        data-tooltip="Toggle Filters" (click)="toggleFilters()">
+        <i class="material-icons">{{filter_arrow_type}}</i>
+      </a>
       <!-- Teal page content  -->
       search
       <div class="row">

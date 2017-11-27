@@ -7,4 +7,10 @@
   background-color: yellowgreen;
   min-height: 100vh;
 }
-
+.filter-trigger-btn{
+  position: relative;
+  top: 5px;
+  left: -30px;
+  float: left;
+}
+.hide {display:none}
