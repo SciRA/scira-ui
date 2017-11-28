@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AbstractSearch } from '../../services/search/abstract-search';
 
 @Component({
   selector: 'app-search',
@@ -11,10 +12,12 @@ export class SearchComponent implements OnInit {
   filter_container_size = 'col s3';
   filter_arrow_type = 'arrow_back';
   position = 'above';
-  constructor() { }
+  constructor(private searchService: AbstractSearch) {
+  }
 
   ngOnInit() {
-    console.log(this);
+    // console.log(this);
+    console.log(this.searchService.search());
   }
   toggleFilters() {
     if (this.filter_visibility) {
