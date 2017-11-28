@@ -41,15 +41,11 @@
       <div class="row">
 
         <div class="col s12 cards-container">
-          <app-paper>
-            loading paper
-          </app-paper>
-          <app-paper>
-            loading paper
-          </app-paper>
-          <app-paper>
-            loading paper
-          </app-paper>
+          <div  *ngFor="let paper of papers">
+            <app-paper [paper]="paper">
+              loading paper
+            </app-paper>
+          </div>
         </div>
       </div>
     </div>

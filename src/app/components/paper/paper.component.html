@@ -1,21 +1,41 @@
 <div class="col m5">
-  <div class="card small">
+  <div class="hoverable  card small">
     <div class="card-image waves-effect waves-block waves-light">
       <img class="activator" src="assets/images/paper.jpg">
     </div>
-    <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">Card Title
+    <div class=" card-content">
+      <span class="card-title activator grey-text text-darken-4 ">{{paper.title}}
         <i class="material-icons right">more_vert</i>
       </span>
-      <p>
-        <a href="#">This is a link</a>
-      </p>
+
     </div>
     <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Card Title
+      <span class="card-title grey-text text-darken-4 ">{{paper.title}}
         <i class="material-icons right">close</i>
       </span>
-      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+      <ul class="collapsible popout" data-collapsible="accordion">
+          <li>
+            <div class="collapsible-header"><i class="material-icons">filter_drama</i>Authors</div>
+            <div class="collapsible-body"><span>{{paper.authors.toString()}}</span></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">place</i>University</div>
+            <div class="collapsible-body"><span>{{paper.university}}</span></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">place</i>Paper domain</div>
+            <div class="collapsible-body"><span>{{paper.domain}}</span></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">place</i>ContentUrl</div>
+            <div class="collapsible-body"><a href="http://{{paper.contentUrl}}" target="_blank">paper url</a></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">place</i>Publication date</div>
+            <div class="collapsible-body"><span>{{paper.publishDate}}</span></div>
+          </li>
+        
+      </ul>
     </div>
   </div>
 </div>
