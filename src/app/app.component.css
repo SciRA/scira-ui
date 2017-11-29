@@ -1,0 +1,11 @@
+
+main {
+    flex: 1 0 auto;
+}
+
+.page-footer{
+
+    position:fixed;
+    bottom:0;
+    width:100%;
+}
