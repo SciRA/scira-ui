@@ -1,18 +1,18 @@
 language: node_js
 node_js:
   - "6"
- 
+
 branches:
   only:
     - master
- 
+
 cache:
   directories:
     - node_modules
- 
+
 script:
-  - ng build -dev
- 
+  - ng build -dev --base-href "https://scira.github.io/scira-ui/"
+
 deploy:
   provider: pages
   skip_cleanup: true
