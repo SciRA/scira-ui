@@ -24,12 +24,14 @@ import { PaperComponent } from './components/paper/paper.component';
 import { SearchComponent } from './pages/search/search.component';
 import { SearchProvider } from './services/search/serach-service-provider';
 import { AboutSciraComponent } from './pages/about-scira/about-scira.component';
+import { PaperPageComponent } from './pages/paper-page/paper-page.component';
 
 
 const appRoutes: Routes = [
   { path: '', component: AboutSciraComponent, canActivate: [AuthGuard] },
   { path: 'search', component: SearchComponent, canActivate: [AuthGuard] },
   { path: 'contact', component: ContactComponent, canActivate: [AuthGuard] },
+  { path: 'paper/:id', component: PaperPageComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent }
 ];
@@ -48,7 +50,8 @@ const appRoutes: Routes = [
     RegisterComponent,
     PageNotFoundComponent,
     PaperComponent,
-    AboutSciraComponent
+    AboutSciraComponent,
+    PaperPageComponent
   ],
 
   imports: [

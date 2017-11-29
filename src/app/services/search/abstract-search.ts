@@ -6,4 +6,5 @@ import { Paper } from '../../models/paper';
 export abstract class AbstractSearch {
     public abstract search();
     public abstract getPages(): Observable<Paper[]>;
+    public abstract getPaperByID(id): Observable<Paper>;
 }
