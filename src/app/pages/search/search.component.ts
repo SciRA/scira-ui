@@ -36,6 +36,7 @@ export class SearchComponent implements OnInit {
   initFilters(): any {
     $(document).ready(() => {
       $('#domain_filter.chips-autocomplete').material_chip({
+        data: [],
         placeholder: 'Enter a domain',
         autocompleteOptions: {
           data: this.domains,
