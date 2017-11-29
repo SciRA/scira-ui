@@ -10,12 +10,19 @@ declare var $: any;
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+
   filter_visibility = true;
   paper_container_size = 'col s9';
   filter_container_size = 'col s3';
   filter_arrow_type = 'arrow_back';
   position = 'above';
   papers: Paper[];
+  domains: Object = {
+    'Machine Learning': null,
+    'Computer Science': null,
+    'Security': null,
+    'Artifical Inteligence': null
+  };
   constructor(private searchService: AbstractSearch) {
   }
 
@@ -24,6 +31,19 @@ export class SearchComponent implements OnInit {
     console.log(this.searchService.search());
     this.searchService.getPages().subscribe(papers => this.papers = papers);
     console.log(JSON.parse(JSON.stringify(this.papers[0])));
+    this.initFilters();
+  }
+  initFilters(): any {
+    $(document).ready(() => {
+      $('#domain_filter.chips-autocomplete').material_chip({
+        placeholder: 'Enter a domain',
+        autocompleteOptions: {
+          data: this.domains,
+          limit: Infinity,
+          minLength: 1
+        }
+      });
+    });
   }
   toggleFilters() {
     if (this.filter_visibility) {
