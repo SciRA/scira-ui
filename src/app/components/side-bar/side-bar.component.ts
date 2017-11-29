@@ -10,7 +10,8 @@ declare var $: any;
 })
 export class SideBarComponent implements OnInit {
 
-  constructor(public userService: UserService) { }
+  constructor(public userService: UserService) {
+  }
 
   ngOnInit() {
     // $(".button-collapse").sideNav();

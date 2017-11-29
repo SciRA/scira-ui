@@ -1,17 +1,22 @@
+.page-content {}
+
 .filter-container {
-  background-color: gray;
+  /* background-color: gray; */
   min-height: 100vh;
+  position: relative;
 }
 
 .paper-container {
-  background-color: yellowgreen;
+  /* background-color: yellowgreen; */
+  background-image: url('/assets/images/notebook-background.jpg');
+  background-size: cover;
   min-height: 100vh;
 }
 
 .filter-trigger-btn {
   position: relative;
   top: 5px;
-  left: -30px;
+  left: -10px;
   float: left;
 }
 
@@ -19,23 +24,37 @@
   display: none
 }
 
-div.search-box{
+.filter-comands {
+  position: absolute;
+  margin-top: 25px;
+  left: 0;
+  right: 0;
+}
+
+div.search-box {
   position: relative;
 }
+
 div.search {
   position: absolute;
-  margin-top: 12px;
+  margin: 0 25px;
   padding: 1px 0 0 0;
   z-index: 2;
   left: 0;
   right: 0;
 }
+
 div.search-wrapper {
-  margin: 0 25px;
+  margin: 12px 10%;
   -webkit-transition: margin .25s ease;
   transition: margin .25s ease;
   border-radius: 10px;
 }
+div.search-wrapper.focused {
+  margin: 12px 5%;
+}
+
+
 div.search .search-wrapper input#search {
   display: block;
   font-size: 16px;
@@ -48,6 +67,12 @@ div.search .search-wrapper input#search {
   padding: 0 45px 0 15px;
   border: 0;
 }
+
+div.search .search-wrapper input#search:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 div.search .search-wrapper i.material-icons {
   position: absolute;
   top: 10px;

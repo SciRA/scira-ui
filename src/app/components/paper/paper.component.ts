@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Paper } from '../../models/paper';
 
 @Component({
   selector: 'app-paper',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./paper.component.css']
 })
 export class PaperComponent implements OnInit {
-
-  constructor() { }
+  @Input() paper: Paper;
+  constructor() {
+    console.log('paper-constructor');
+  }
 
   ngOnInit() {
+    console.log('on init');
   }
 
 }
