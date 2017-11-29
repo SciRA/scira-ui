@@ -1,4 +1,3 @@
-
 main {
     flex: 1 0 auto;
 }
@@ -9,3 +8,8 @@ main {
     bottom:0;
     width:100%;
 }
+
+.pageContent {
+    display: block;
+    min-height: 100vh;
+  }

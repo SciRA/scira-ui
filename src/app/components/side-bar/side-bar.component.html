@@ -4,8 +4,8 @@
       <img src="assets/images/background.png">
     </div>
     <a href="#!user"><img class="circle" src="assets/images/logo.png"></a>
-    <a href="#!name"><span class="white-text name">John Doe</span></a>
-    <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+    <a href="#!name"><span class="white-text name">{{userService.currentUser?.username}}</span></a>
+    <a href="#!email"><span class="white-text email">example@gmail.com</span></a>
   </div></li>
   <li><a href="#!"><i class="material-icons">cloud</i>Welcome to SciRA</a></li>
   <!-- <li><a href="#!">Second Link</a></li> -->
@@ -14,5 +14,6 @@
   <li><a class="waves-effect" routerLink="/">Home</a></li>
   <li><a class="waves-effect" routerLink="/search">Search</a></li>
   <li><a class="waves-effect" routerLink="/contact">Contact</a></li>
+  <li><a class="waves-effect" (click)="userService.invalidate()" >Logout</a></li>
 </ul>
 <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
