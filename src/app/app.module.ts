@@ -5,7 +5,6 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { UserComponent } from './components/user/user.component';
 
 import { DataService } from './services/data.service';
 import { UserService } from './services/user.service';
@@ -28,7 +27,7 @@ import { AboutSciraComponent } from './pages/about-scira/about-scira.component';
 
 
 const appRoutes: Routes = [
-  { path: '', component: UserComponent, canActivate: [AuthGuard] },
+  { path: '', component: AboutSciraComponent, canActivate: [AuthGuard] },
   { path: 'search', component: SearchComponent, canActivate: [AuthGuard] },
   { path: 'contact', component: ContactComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
@@ -38,7 +37,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent,
+    AboutSciraComponent,
     SearchComponent,
     NavBarComponent,
     SideBarComponent,
