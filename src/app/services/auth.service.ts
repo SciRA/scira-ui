@@ -9,7 +9,11 @@ export class AuthService {
   isLoggedIn = false;
   // URL where we redirect after logging in
   redirectUrl: string;
-  constructor() { }
+  constructor() {
+    if (localStorage.getItem('currentUser')) {
+      this.isLoggedIn = true;
+    }
+  }
 
   login(user: User): Observable<boolean> {
     console.log('USER just logged in', user.username);
