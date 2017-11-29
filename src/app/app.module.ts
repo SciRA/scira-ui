@@ -9,7 +9,6 @@ import { UserComponent } from './components/user/user.component';
 
 import { DataService } from './services/data.service';
 import { UserService } from './services/user.service';
-import { AboutComponent } from './components/about/about.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 import { MaterializeModule } from 'angular2-materialize';
@@ -25,11 +24,6 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { PaperComponent } from './components/paper/paper.component';
 import { SearchComponent } from './pages/search/search.component';
 
-const appRoutes: Routes = [
-  {path: '', component: UserComponent},
-  {path: 'search', component: AboutComponent},
-  {path: 'contact', component: ContactComponent}
-];
 
 const appRoutes: Routes = [
   { path: '', component: UserComponent, canActivate: [AuthGuard] },
@@ -37,7 +31,7 @@ const appRoutes: Routes = [
   { path: 'contact', component: ContactComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent }
-]
+];
 
 @NgModule({
   declarations: [
