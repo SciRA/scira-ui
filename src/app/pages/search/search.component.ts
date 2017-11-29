@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AbstractSearch } from '../../services/search/abstract-search';
 import { Paper } from '../../models/paper';
 
+declare var $: any;
+
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -36,6 +38,14 @@ export class SearchComponent implements OnInit {
       document.getElementById('filter-container').classList.remove('hide');
     }
     this.filter_visibility = !this.filter_visibility;
+  }
+  onFocus() {
+    const element = $('div.search-wrapper');
+    element.addClass('focused');
+  }
+  onFocusOut() {
+    const element = $('div.search-wrapper');
+    element.removeClass('focused');
   }
 
 }
