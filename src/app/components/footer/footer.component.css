@@ -1,0 +1,6 @@
+footer.page-footer, .footer-copyright, .page-footer {
+    background-color: var(--color1) !important;
+}
+.footer-copyright .container{
+    color: var(--color5)
+}

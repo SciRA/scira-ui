@@ -9,6 +9,12 @@ export class MockSearchService implements AbstractSearch {
 
   papers = [
     new Paper(22, 'MachineLearning for Malware Detection',
+    ['Liviu Ciortuz', 'Tom Michael'], 'Alexandru Ioan Cuza',
+    'Machine Learning', new Date('02-02-1999'), 'www.machinelearning.com'),
+    new Paper(22, 'MachineLearning for Malware Detection',
+    ['Liviu Ciortuz', 'Tom Michael'], 'Alexandru Ioan Cuza',
+    'Machine Learning', new Date('02-02-1999'), 'www.machinelearning.com'),
+    new Paper(22, 'MachineLearning for Malware Detection',
       ['Liviu Ciortuz', 'Tom Michael'], 'Alexandru Ioan Cuza',
       'Machine Learning', new Date('02-02-1999'), 'www.machinelearning.com')
   ];

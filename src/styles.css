@@ -15,3 +15,16 @@ body {
   min-height: 100vh;
 }
 
+
+:root {
+  --color1: #F2EFC7;
+  --color2: #247BA0;
+  --color3: #EEFEFF;
+  --color4: #FFFFFA;
+  --color5: #546A76;
+
+}
+footer.page-footer{
+  background-color: var(--color1) !important;
+}
+

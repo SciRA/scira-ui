@@ -5,10 +5,16 @@
   min-height: 100vh;
   position: relative;
 }
+.btn-floating{
+  background-color: var(--color4) !important;
+}
+.btn-floating i{
+  color :var(--color5);
+}
 
 .paper-container {
-  /* background-color: yellowgreen; */
-  background-image: url('/assets/images/notebook-background.jpg');
+  background-color:var(--color3);
+  /* background-image: url('/assets/images/notebook-background.jpg'); */
   background-size: cover;
   min-height: 100vh;
 }

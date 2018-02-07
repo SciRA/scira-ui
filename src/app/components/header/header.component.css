@@ -1,0 +1,11 @@
+nav{
+    background-color: var(--color1)!important;
+}
+
+nav .nav-wrapper *{
+    color: var(--color5);
+}
+
+nav .nav-wrapper * .material-icons{
+    color: var(--color2)
+}
